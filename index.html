@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login - Toko Buku Pustaka</title>
+  <meta name="theme-color" content="#07111f">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <div class="login-wrap">
+    <aside class="login-hero">
+      <h1>Toko Buku Pustaka</h1>
+      <p>Pesan buku, cek stok, dan lacak pengiriman dalam satu tempat.</p>
+    </aside>
+    <main class="login-form">
+      <form id="formLogin" novalidate>
+        <h2>Masuk ke akun</h2>
+        <label for="email">Email
+          <input type="email" id="email" required autocomplete="username" placeholder="rina@gmail.com">
+        </label>
+        <label for="password">Password
+          <input type="password" id="password" required autocomplete="current-password" placeholder="rina123">
+        </label>
+        <button class="btn" type="submit">Login</button>
+        <div class="aksi">
+          <button type="button" class="btn tautan" id="lupa">Lupa Password</button>
+          <button type="button" class="btn tautan" id="daftar">Daftar</button>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tracking - Toko Buku Pustaka</title>
+  <meta name="theme-color" content="#07111f">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tracking">
+  <header class="atas">
+    <a class="merek" href="dashboard.html">Toko Buku Pustaka</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Stok</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html">Tracking</a>
+      <button class="btn kecil" id="logout">Keluar</button>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Informasi pengiriman</h1>
+      <form id="formCari" class="aksi" novalidate>
+        <label for="noDO" style="flex:1;margin:0">Nomor Delivery Order
+          <input id="noDO" placeholder="DO2026001">
+        </label>
+        <button class="btn" style="align-self:end">Cari</button>
+      </form>
+      <p class="galat" id="galat" role="alert"></p>
+    </section>
+    <section id="hasil" aria-live="polite"></section>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin - Toko Buku Pustaka</title>
+  <meta name="theme-color" content="#07111f">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin">
+  <header class="atas">
+    <a class="merek" href="dashboard.html">Toko Buku Pustaka</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Stok</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html">Tracking</a>
+      <a href="admin.html" aria-current="page">Admin</a>
+      <button class="btn kecil" id="logout" type="button">Keluar</button>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <p class="label-atas">PANEL ADMINISTRATOR</p>
+      <h1>Pemantauan stok toko</h1>
+      <p>Pantau ketersediaan buku dan riwayat penambahan stok yang dilakukan melalui menu Stok.</p>
+    </section>
+    <section>
+      <h2>Ringkasan inventaris</h2>
+      <div class="statistik" id="adminStatistik" aria-live="polite"></div>
+    </section>
+    <section>
+      <div class="judul-bagian">
+        <div>
+          <h2>Riwayat penambahan stok</h2>
+          <p id="statusAktivitas" aria-live="polite"></p>
+        </div>
+        <a class="btn kecil" href="stok.html">Kelola katalog</a>
+      </div>
+      <label for="cariAktivitas">Cari catatan
+        <input id="cariAktivitas" type="search" placeholder="Cari kode, judul, atau nama petugas">
+      </label>
+      <p id="tanpaAktivitas" class="catatan-kosong" hidden>Belum ada aktivitas penambahan stok.</p>
+      <div class="gulir">
+        <table>
+          <thead>
+            <tr><th>Waktu</th><th>Kode</th><th>Judul buku</th><th>Jumlah ditambahkan</th><th>Petugas</th></tr>
+          </thead>
+          <tbody id="tbAktivitas"></tbody>
+        </table>
+      </div>
+      <p class="catatan-sistem">Data tersimpan di browser ini. Untuk pemantauan multi-perangkat dan keamanan akun, aplikasi perlu backend/server.</p>
+    </section>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

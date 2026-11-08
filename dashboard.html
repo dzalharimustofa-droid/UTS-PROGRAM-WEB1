@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard - Toko Buku Pustaka</title>
+  <meta name="theme-color" content="#07111f">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+  <header class="atas">
+    <a class="merek" href="dashboard.html">Toko Buku Pustaka</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Stok</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html">Tracking</a>
+      <button class="btn kecil" id="logout">Keluar</button>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1 id="greeting"></h1>
+      <p id="tgl"></p>
+    </section>
+    <section>
+      <h2>Ringkasan toko</h2>
+      <div class="statistik" id="statistik" aria-live="polite"></div>
+    </section>
+    <section>
+      <h2>Katalog buku</h2>
+      <div class="katalog-dashboard" id="katalogDashboard"></div>
+    </section>
+    <nav class="menu" aria-label="Menu utama">
+      <a href="stok.html">Informasi Stok / Katalog</a>
+      <a href="tracking.html">Tracking Pengiriman</a>
+      <button id="laporan" type="button">Laporan Pemesanan</button>
+      <button id="history" type="button">History Transaksi</button>
+      <a href="checkout.html">Buat Pemesanan</a>
+    </nav>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

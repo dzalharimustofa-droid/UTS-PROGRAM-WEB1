@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stok - Toko Buku Pustaka</title>
+  <meta name="theme-color" content="#07111f">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stok">
+  <header class="atas">
+    <a class="merek" href="dashboard.html">Toko Buku Pustaka</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Stok</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html">Tracking</a>
+      <button class="btn kecil" id="logout">Keluar</button>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Informasi stok buku</h1>
+      <div class="baris-alat">
+        <label for="cariStok">Cari katalog<input id="cariStok" type="search" placeholder="Cari judul, kode, atau kategori"></label>
+        <p id="jumlahHasil" aria-live="polite"></p>
+      </div>
+      <div class="gulir">
+        <table>
+          <thead>
+            <tr><th>Sampul</th><th>Kode</th><th>Judul</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Aksi</th></tr>
+          </thead>
+          <tbody id="tbStok"></tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <h2>Tambah stok baru</h2>
+      <form id="formStok" novalidate>
+        <div class="dua">
+          <label for="kode">Kode<input id="kode" placeholder="BK-006"></label>
+          <label for="judul">Judul<input id="judul"></label>
+          <label for="kategori">Kategori<input id="kategori"></label>
+          <label for="harga">Harga (Rp)<input type="number" id="harga" min="1"></label>
+          <label for="jumlah">Jumlah stok<input type="number" id="jumlah" min="0"></label>
+        </div>
+        <p class="galat" id="galat" role="alert"></p>
+        <button class="btn">Tambah ke tabel</button>
+      </form>
+    </section>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

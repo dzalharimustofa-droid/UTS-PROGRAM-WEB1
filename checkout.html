@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pemesanan - Toko Buku Pustaka</title>
+  <meta name="theme-color" content="#07111f">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+  <header class="atas">
+    <a class="merek" href="dashboard.html">Toko Buku Pustaka</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Stok</a>
+      <a href="checkout.html">Pemesanan</a>
+      <a href="tracking.html">Tracking</a>
+      <button class="btn kecil" id="logout">Keluar</button>
+    </nav>
+  </header>
+  <main>
+    <h1>Pemesanan buku</h1>
+    <section>
+      <h2>Pilih buku</h2>
+      <label for="pilihBuku">Buku<select id="pilihBuku"></select></label>
+      <button class="btn" type="button" id="tambahItem">Tambah ke pesanan</button>
+    </section>
+    <section>
+      <h2>Daftar pesanan</h2>
+      <p id="kosong">Belum ada buku dipilih.</p>
+      <div class="gulir">
+        <table>
+          <thead>
+            <tr><th>Judul</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th><th>Aksi</th></tr>
+          </thead>
+          <tbody id="tbKeranjang"></tbody>
+        </table>
+      </div>
+      <p class="total">Total: <span id="totalBayar">Rp 0</span></p>
+    </section>
+    <section>
+      <h2>Data pemesan dan pembayaran</h2>
+      <form id="formPesan" novalidate>
+        <div class="dua">
+          <label for="nama">Nama pemesan<input id="nama" required></label>
+          <label for="emailP">Email<input type="email" id="emailP" required></label>
+          <label for="telp">Nomor telepon<input id="telp" placeholder="081234567890" required></label>
+          <label for="bayar">Metode pembayaran
+            <select id="bayar" required>
+              <option value="">Pilih...</option>
+              <option>Transfer Bank</option>
+              <option>E-Wallet</option>
+              <option>Bayar di Tempat (COD)</option>
+            </select>
+          </label>
+        </div>
+        <label for="alamat">Alamat pengiriman<textarea id="alamat" rows="3" required></textarea></label>
+        <p class="galat" id="galat" role="alert"></p>
+        <button class="btn">Buat pesanan</button>
+      </form>
+    </section>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
